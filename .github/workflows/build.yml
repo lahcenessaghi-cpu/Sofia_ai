@@ -1,4 +1,4 @@
- name: Build APK
+name: Build APK
 on: [push]
 jobs:
   build:
@@ -13,5 +13,4 @@ jobs:
       - run: flutter build apk --release
       - uses: actions/upload-artifact@v4
         with:
-          name: sofia-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+          name: sofia-apk  path: build/app/outputs/flutter-apk/
