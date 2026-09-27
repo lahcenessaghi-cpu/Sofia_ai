@@ -8,12 +8,9 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.22.0'
-          channel: 'stable'
-      - run: flutter pub get
-      - run: rm -rf android
-      - run: flutter create .
+      - run: flutter create.
       - run: flutter build apk --release
       - uses: actions/upload-artifact@v4
         with:
-          name: sofia-apk
+          name: apk
           path: build/app/outputs/flutter-apk/
