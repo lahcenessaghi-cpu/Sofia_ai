@@ -11,8 +11,7 @@ jobs:
           channel: 'stable'
       - run: flutter pub get
       - run: rm -rf android
-      - run: flutter create --platforms=android.
-      - run: flutter pub get
+      - run: flutter create.
       - run: flutter build apk --release
       - uses: actions/upload-artifact@v4
         with:
